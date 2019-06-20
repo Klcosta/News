@@ -12,9 +12,9 @@ var collections = ["scrapedData"];
 
 //Connect mongojs to db variables
 var db = require("./models")
-// var PORT = 3000
+var PORT = 3000
 
-var PORT = process.env.PORT || 3000;
+// var PORT = process.env.PORT || 3000;
 
 //Set up server
 var app = express();
@@ -26,9 +26,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongto DB
-// mongoose.connect("mongodb://localhost/articlesdb")
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-mongoose.connect(MONGODB_URI);
+mongoose.connect("mongodb://localhost/articlesdb")
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+// mongoose.connect(MONGODB_URI);
 
 //ROUTES
 

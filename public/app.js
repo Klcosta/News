@@ -46,7 +46,7 @@ $(".save").on("click", function () {
 $("#scrape").on('click', function(){
     console.log ("clicked")
     $.ajax({
-        method:"POST",
+        method:"GET",
         url:"/scrape"
     })
 })
